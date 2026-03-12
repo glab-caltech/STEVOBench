@@ -17,6 +17,7 @@ export function renderOverview(container) {
       </p>
       <div class="hero-actions">
         <a href="#leaderboard" class="btn btn-primary">View Full Leaderboard</a>
+        <a href="https://github.com/jhanliufu-personal/STEVO-Bench/tree/main" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="#paper" class="btn btn-ghost">Read the Paper</a>
       </div>
     </section>
