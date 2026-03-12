@@ -55,6 +55,20 @@ export function renderOverview(container) {
 
     <section class="section">
       <div class="section-header">
+        <h2 class="section-title">How STEVO-Bench Works</h2>
+      </div>
+      <div class="pipeline-figure">
+        <img
+          src="assets/steobench_pipeline.png"
+          alt="STEVO-Bench pipeline diagram"
+          class="pipeline-img"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
         <h2 class="section-title">Example Tasks &amp; Videos</h2>
       </div>
       <div class="examples-viewer">

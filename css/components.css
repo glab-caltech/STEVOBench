@@ -811,4 +811,14 @@
   margin: 0;
 }
 
+/* Pipeline figure */
+.pipeline-figure {
+  display: flex;
+  justify-content: center;
+}
 
+.pipeline-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
