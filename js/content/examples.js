@@ -83,7 +83,7 @@ export const EXAMPLE_TASKS = [
 export const VIDEO_CRITERIA = {
   "alka_seltzer_fizz_cardboard": {
     "veo3": {
-      stateProgress: true,
+      stateProgress: false,
       physicalPlausibility: true,
       coherence: true,
       observationControl: true,
