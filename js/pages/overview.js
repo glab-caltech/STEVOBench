@@ -13,7 +13,7 @@ export function renderOverview(container) {
       <p class="hero-desc">
         STEVO-Bench evalutes whether video world models can “simulate” a world beyond 
         the pixel frame. We introduce observation control such as occlusion, camera lookaway 
-        or illumination dimming to prove whether video world models can evolve state successfully
+        or illumination dimming to probe whether video world models can evolve state successfully
       </p>
       <div class="hero-actions">
         <a href="#leaderboard" class="btn btn-primary">View Full Leaderboard</a>
@@ -75,7 +75,7 @@ export function renderOverview(container) {
         <div class="task-selector-row">
           <label class="task-selector-label" for="task-select">Task</label>
           <select class="task-select" id="task-select">
-            ${EXAMPLE_TASKS.map((t) => `<option value="${t.id}">${t.title} — ${LEVELS[t.level - 1].name}</option>`).join("")}
+            ${EXAMPLE_TASKS.map((t) => `<option value="${t.id}"${t.id === "fuse_burn_curtain" ? " selected" : ""}>${t.title} — ${LEVELS[t.level - 1].name}</option>`).join("")}
           </select>
         </div>
         <div class="task-detail" id="task-detail"></div>
@@ -205,7 +205,7 @@ export function renderOverview(container) {
 
   const taskSelect = document.getElementById("task-select");
   taskSelect.addEventListener("change", () => renderTask(taskSelect.value));
-  renderTask(EXAMPLE_TASKS[0].id);
+  renderTask("fuse_burn_curtain");
 
   // Benchmark Categories — animated pie chart + legend
   const catDescs = [
