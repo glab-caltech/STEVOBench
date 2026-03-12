@@ -61,7 +61,7 @@ export function renderOverview(container) {
         <div class="task-selector-row">
           <label class="task-selector-label" for="task-select">Task</label>
           <select class="task-select" id="task-select">
-            ${EXAMPLE_TASKS.map((t) => `<option value="${t.id}">${t.title} — L${t.level} ${t.category}</option>`).join("")}
+            ${EXAMPLE_TASKS.map((t) => `<option value="${t.id}">${t.title} — ${LEVELS[t.level - 1].name}</option>`).join("")}
           </select>
         </div>
         <div class="task-detail" id="task-detail"></div>
@@ -159,19 +159,19 @@ export function renderOverview(container) {
 
     const camId = task.baseId ?? task.id;
     videos.innerHTML = `
-      <div class="video-group" id="vg-video">
+      <div class="video-group show-criteria" id="vg-video">
         <div class="video-group-header">
           <span class="video-group-label">Video Models</span>
-          <button class="criteria-toggle-btn" data-group="vg-video">Show Criteria</button>
+          <button class="criteria-toggle-btn active" data-group="vg-video">Hide Criteria</button>
         </div>
         <div class="task-videos-grid">
           ${exVideoModels.map((m) => videoCard(m, task.id, task.id)).join("")}
         </div>
       </div>
-      <div class="video-group" id="vg-camera">
+      <div class="video-group show-criteria" id="vg-camera">
         <div class="video-group-header">
           <span class="video-group-label">Camera-Controlled Models</span>
-          <button class="criteria-toggle-btn" data-group="vg-camera">Show Criteria</button>
+          <button class="criteria-toggle-btn active" data-group="vg-camera">Hide Criteria</button>
         </div>
         <div class="task-videos-grid">
           ${exCameraModels.map((m) => videoCard(m, camId, task.id)).join("")}
