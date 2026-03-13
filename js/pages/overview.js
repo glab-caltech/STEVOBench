@@ -1,6 +1,7 @@
 import { LEADERBOARD, LEVELS } from "../content/leaderboard.js";
 import { buildLeaderboardTable } from "../components/leaderboard-table.js";
 import { EXAMPLE_TASKS, VIDEO_CRITERIA } from "../content/examples.js";
+import { ICON_GITHUB, ICON_HUGGINGFACE, ICON_ARXIV } from "../icons.js";
 
 export function renderOverview(container) {
   container.innerHTML = `
@@ -17,8 +18,9 @@ export function renderOverview(container) {
       </p>
       <div class="hero-actions">
         <a href="#leaderboard" class="btn btn-primary">View Full Leaderboard</a>
-        <a href="https://github.com/jhanliufu-personal/STEVO-Bench/tree/main" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="#paper" class="btn btn-ghost">Read the Paper</a>
+        <a href="https://github.com/jhanliufu-personal/STEVO-Bench/tree/main" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">${ICON_GITHUB} GitHub</a>
+        <a href="https://huggingface.co/datasets/JhanLiufu/StEvo-Bench" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">${ICON_HUGGINGFACE} HuggingFace</a>
+        <a href="#paper" class="btn btn-ghost">${ICON_ARXIV} Paper</a>
       </div>
     </section>
 
@@ -75,7 +77,7 @@ export function renderOverview(container) {
         <div class="task-selector-row">
           <label class="task-selector-label" for="task-select">Task</label>
           <select class="task-select" id="task-select">
-            ${EXAMPLE_TASKS.map((t) => `<option value="${t.id}"${t.id === "fuse_burn_curtain" ? " selected" : ""}>${t.title} — ${LEVELS[t.level - 1].name}</option>`).join("")}
+            ${EXAMPLE_TASKS.map((t) => `<option value="${t.id}"${t.id === "ball_roll_down_curtain" ? " selected" : ""}>${t.title} — ${LEVELS[t.level - 1].name}</option>`).join("")}
           </select>
         </div>
         <div class="task-detail" id="task-detail"></div>
@@ -205,7 +207,7 @@ export function renderOverview(container) {
 
   const taskSelect = document.getElementById("task-select");
   taskSelect.addEventListener("change", () => renderTask(taskSelect.value));
-  renderTask("fuse_burn_curtain");
+  renderTask("ball_roll_down_curtain");
 
   // Benchmark Categories — animated pie chart + legend
   const catDescs = [

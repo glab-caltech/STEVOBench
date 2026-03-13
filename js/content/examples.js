@@ -268,6 +268,13 @@ export const VIDEO_CRITERIA = {
       observationControl: true,
       actionControl: true,
     },
+    "genie3": {
+      stateProgress: false,
+      physicalPlausibility: true,
+      coherence: true,
+      observationControl: true,
+      actionControl: true,
+    },
   },
   "billiard_break_lightoff": {
     "veo3": {
