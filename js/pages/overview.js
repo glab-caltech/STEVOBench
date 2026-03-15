@@ -21,6 +21,8 @@ export function renderOverview(container) {
         <a href="https://github.com/jhanliufu-personal/STEVO-Bench/tree/main" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">${ICON_GITHUB} GitHub</a>
         <a href="https://huggingface.co/datasets/JhanLiufu/StEvo-Bench" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">${ICON_HUGGINGFACE} HuggingFace</a>
         <a href="#paper" class="btn btn-ghost">${ICON_ARXIV} Paper</a>
+        <a href="https://ziqi-ma.github.io/blog/2026/outofsight/" class="btn btn-ghost">📝 Blog</a>
+        
       </div>
     </section>
 
